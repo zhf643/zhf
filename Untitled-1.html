@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>网格系统</title>
+    <meta charset="utf-8">
+    <style type="text/CSS">
+        .container{
+            width: 100%;
+        }
+        .row:before, .row:after {
+            content:"";
+            display: table ;
+            clear:both;
+        }
+        [class*='col-']{
+            box-sizing: border-box;
+            float: left;
+            min-height: 200px;
+            width: 33.33%;
+            background-clip:content-box;
+        }
+        .col-1{
+            float: left;
+            height: 200px;
+            width: 33.33%;
+            padding: 20px;
+        }
+        .col-2{
+            float: left;
+            height: 400px;
+            width: 66.66%;
+            padding: 20px; 
+        }
+        .col-3{
+            float: right;
+            height: 400px;
+            width: 33.33%; 
+            padding: 20px;
+        }
+        .outline,.outline*{
+            outline: 1px solid black;
+        }
+        [class*='col-']>p{
+            padding: 2px;
+            margin: 2px;
+            text-align: top left;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container outline">
+        <div class="row">
+            <div class="col-2" style="background-color: brown"><p>1</p></div>
+            <div class="col-1" style="background-color :cornflowerblue; "><p>2</p></div>
+            <div class="col-3" style="background-color: purple;" ><p>4</p></div>
+            <div class="col-1" style="background-color:cyan; "><p>3</p></div>
+            <div class="col-1" style="background-color:darkgoldenrod;"><p>5</p></div>
+        </div>
+    </div>
+
+</body>
+</html>
