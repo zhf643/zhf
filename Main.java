@@ -9,9 +9,6 @@ class MyStack<T>{
     MyStack(){
         stack=new Object[100];
     }
-    public boolean ifEmpty(){
-        return size==0;
-    }
     public T top(){
         T t=null;
         if(size>0){
